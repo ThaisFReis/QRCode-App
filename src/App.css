@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: TrinidadNeue;
+  src: url(./Assets/Fonts/TrinidadNeue/trinidad_neue_black-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_black_oblique-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_bold-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_bold_oblique-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_light-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_light_oblique-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_regular-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_regular_oblique-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_semibold-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_semibold_oblique-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_thin-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_thin_oblique-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_ultralight-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_ultlight_oblique-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_ultrabold-webfont.woff) format("woff"), url(./Assets/Fonts/TrinidadNeue/trinidad_neue_ultrabold_oblique-webfont.woff) format("woff");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.trinidadneue{
+  font-family: TrinidadNeue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: ZerafontsAristotelica;
+  src: url(./Assets/Fonts/Zerafonts_Aristotelica/zetafonts_-_aristotelica_display_extralight-webfont.woff) format("woff"), url(./Assets/Fonts/Zerafonts_Aristotelica/zetafonts_-_aristotelica_icons_demibold-webfont.woff) format("woff"), url(./Assets/Fonts/Zerafonts_Aristotelica/zetafonts_-_aristotelica_small_caps_hairlin-webfont.woff) format("woff"), url(./Assets/Fonts/Zerafonts_Aristotelica/zetafonts_-_aristotelica_text_extralight-webfont.woff) format("woff");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.zerafontsaristotelica{
+  font-family: ZerafontsAristotelica;
+}
+
+*{
+      font-family: 'TrinidadNeue', sans-serif !important;
+}
+
+.App{
+  background-color: #161616;
+
+  width: 100vw;
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
+  justify-content: top center;
   align-items: center;
+}
+
+h1{
+  margin-top: 6vw;
+
+  color: #e7eff3;
+  font-size: 4vw;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.generate-qr-code{
+  border: none;
+  border-radius: 5px;
+
+  width: fit-content;
+  height: fit-content;
+  margin-top: 6vw;
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.generate-qr-code input{
+  background-color: #e7eff3;
+  border: none;
+  border-radius: 5px;
+  box-shadow: #000 0.1vw 0.3vw 0.7vw;
+
+  width: 30vw;
+  height: 2vw;
+  padding: 0.5vw;
+
+  color: #161616;
+  font-family: 'ZerafontsAristotelica', sans-serif !important;
+  font-size: 1.2vw;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.generate-qr-code input:focus{
+  outline: none;
+}
+
+.generate-qr-code input::placeholder,
+.generate-qr-code input:focus,
+.generate-qr-code input:active,
+.generate-qr-code input::after,
+.generate-qr-code input::before,
+.generate-qr-code input::selection{
+  color: #161616;
+  font-family: 'ZerafontsAristotelica', sans-serif !important;
+  font-size: 1.2vw;
+  font-weight: 600;
+}
+
+.generate-qr-code button{
+  background-color: #e7eff3;
+  border: none;
+  border-radius: 5px;
+  box-shadow: #000 0.1vw 0.3vw 0.7vw;
+
+  width: 10vw;
+  height: 3vw;
+  padding: 0.5vw;
+  margin-top: 2vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #000;
+  font-family: 'ZerafontsAristotelica', sans-serif !important;
+  font-size: 1.3vw;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.generate-qr-code button:hover{
+  background-color: #75c76b;
+}
+
+.qr-code{
+  width: fit-content;
+  height: fit-content;
+  margin-top: 6vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code img{
+  border-radius: 10px;
+
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 2vw;
+}
+
+.qr-code a{
+  background-color: #e7eff3;
+  border: #00000025 1px solid;
+  border-radius: 5px;
+  box-shadow: #000 0.1vw 0.3vw 0.5vw;
+
+  width: fit-content;
+  height: fit-content;
+  padding: 1vw 2vw;
+  margin-bottom: 1vw;
+
+  color: #000;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+}
+
+.qr-code a:hover{
+  background-color: #75c76b;
+}
+
+/* Clear button */
+.qr-code button{
+  background-color: transparent;
+  border: none;
+
+  color: #e7eff3;
+  font-size: 0.75vw;
+  text-transform: uppercase;
+}
+
+.qr-code button:hover{
+  color: #fe2908;
+
+  cursor: pointer;
 }
